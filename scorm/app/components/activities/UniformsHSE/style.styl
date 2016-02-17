@@ -1,0 +1,252 @@
+@import 'nib/clearfix';
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.UniformsHSE {
+  backgroundCover(url('./background.jpg'));
+  color: white;
+
+  @media (min-width: (breakpointMobile + 1)) {
+    .Activity__contentContainer {
+      flexCenter(column);
+    }
+  }
+}
+
+.UniformsHSE__title,
+.UniformsHSE__intro {
+  text-align: center;
+  color: white;
+}
+
+.UniformsHSE__intro {
+  max-width: 44rem;
+  font-size: 0.94em;
+  margin: 0 auto 2vh;
+}
+
+.UniformsHSE__interactArea {
+  clearfix();
+  positionRel();
+  width: 100%;
+  width: calc(100% + 4rem);
+}
+
+.UniformsHSE__question,
+.UniformsHSE__feedback,
+.UniformsHSE__summary {
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  transform: translateY(10%);
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.UniformsHSE__summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.UniformsHSE__summaryPanelContainer {
+  width: 33.3%;
+  height: 50%;
+  padding: 2px;
+
+  &:first-child {
+    height: 100%;
+  }
+}
+
+.UniformsHSE__summaryPanel {
+  size(100%);
+  background-color: white;
+  border-radius: 0.6rem;
+  box-shadow: 0 0 12px rgba(black, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.UniformsHSE__summaryPanel__figure {
+  backgroundContain();
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.UniformsHSE__summaryPanel__caption {
+  background-color: colBlue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  // padding: 0.4em;
+  padding: 0.6em;
+  font-size: 1.9vmin;
+  width: 100%;
+}
+
+.UniformsHSE__summaryPanel__captionNumber {
+  size(1.4rem);
+  font-weight: 400;
+  margin-right: 0.4rem;
+  text-align: center;
+  line-height: 1.5;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: rgba(white, 0.2);
+  display: none;
+}
+
+.UniformsHSE__summaryPanel__captionContent {
+  line-height: 1.1;
+  width: 100%;
+}
+
+.UniformsHSE__question_current,
+.UniformsHSE__feedback_visible,
+.UniformsHSE__summary_visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+  height: auto;
+  overflow: visible;
+}
+
+.UniformsHSE__question_current {
+  height: 100%;
+}
+
+.UniformsHSE__summary_visible {
+  height: 106%;
+
+  @media (max-width: breakpointMobile) {
+    height: auto;
+  }
+}
+
+.UniformsHSE__feedbackPanelContainer,
+.UniformsHSE__questionsContainer {
+  height: 44vh;
+  min-height: 18rem;
+}
+
+.UniformsHSE__questionsContainer {
+  float: left;
+  width: 72%;
+  position: relative;
+}
+
+.UniformsHSE__feedbackPanelContainer {
+  width: 27%;
+  float: right;
+  position: relative;
+}
+
+.UniformsHSE__questionSubmit {
+  positionAbs(50%, 13.5%, auto, auto);
+  pillButton(10rem);
+  margin-right: -5rem;
+  z-index: 9;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.UniformsHSE__feedbackPanel {
+  positionAbs(0px, 0px, 0px, 0px);
+  padding: 0.6rem;
+  background-color: rgba(black, 0.4);
+}
+
+//
+
+.UniformsHSE__questionTitle {
+  fontDisplay(700);
+  text-align: center;
+  margin: 0 auto 1rem;
+
+  em {
+    color: colBlue;
+  }
+}
+
+.UniformsHSE__questionOptionsContainer {
+  display: flex;
+  size(100%);
+
+  &.multiSelect {
+    box-shadow: 0 0 4px rgba(black, 0.2);
+    background-color: white;
+    border-radius: 0.8rem;
+    padding-top: 0.2rem;
+  }
+}
+
+.UniformsHSE__questionOptionContainer {
+  flex-grow: 1;
+  height: 100%;
+  padding: 0 0.2rem;
+}
+
+//
+
+.UniformsHSE__feedback {
+  font-size: 1.88vmin;
+
+  em {
+    font-weight: 700;
+  }
+}
+
+.UniformsHSE__summaryFeedback {
+  font-size: 2.1vmin;
+  margin: 1em auto;
+  text-align: center;
+
+  &.success em {
+    color: colBlue;
+  }
+}
+
+.UniformsHSE__correctFeedback em {
+  color: colBlue;
+}
+
+colIncorrect = darken(white, 40%);
+
+.UniformsHSE__incorrectFeedback em {
+  color: colIncorrect;
+}
+
+.UniformsHSE__feedback__noPoints {
+  margin-top: 0.2em;
+  color: colIncorrect;
+}
+
+.UniformsHSE__feedbackButton,
+.UniformsHSE__restartButton {
+  pillButton(10em);
+  margin: 0.6em auto 0;
+  font-size: 1em;
+}
+
+.UniformsHSE__progressMeterContainer {
+  positionRel();
+  margin: 0 1.3rem 0.3rem;
+}
+
+.UniformsHSE__scoreContainer {
+  fontDisplay(400);
+  font-size: 1.1rem;
+  color: colGreyPale;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}

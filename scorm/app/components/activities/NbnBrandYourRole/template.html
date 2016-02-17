@@ -1,0 +1,21 @@
+<div class="NbnBrandYourRole__contentContainer">
+  <div class="NbnBrandYourRole__titleContainer">
+    <div class="NbnBrandYourRole__title">
+      The <span class="nbnMention">nbn</span>™ brand&nbsp;and <em>your&nbsp;role</em>
+    </div>
+  </div>
+
+  <div class="NbnBrandYourRole__contentPanelsContainer">
+  <% each(panels, function(columnPanels) { %>
+    <div class="NbnBrandYourRole__contentPanelsColumn">
+    <% each(columnPanels, function (panelContent) { %>
+      <div class="NbnBrandYourRole__contentPanel">
+        <div class="NbnBrandYourRole__contentPanelContent">
+          <%= panelContent %>
+        </div>
+      </div>
+    <% }) %>
+    </div>
+  <% }) %>
+  </div>
+</div>

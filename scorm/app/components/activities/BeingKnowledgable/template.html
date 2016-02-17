@@ -1,0 +1,25 @@
+<div class="BeingKnowledgable__contentContainer">
+  <div class="flexContentWrapper">
+    <h1 class="BeingKnowledgable__title ContentPanel__title">Being knowledgable</h1>
+    <div class="BeingKnowledgable__intro">
+      <p>Being knowledgeable about the technology you work with is also a way of representing <span class="nbnMention">nbn</span> positively.</p>
+      <p>Here’s a summary of the <%= technologies.length %> technologies we use to roll out the network.<br/><strong>Click&nbsp;the&nbsp;icons.</strong></p>
+    </div>
+    <div class="BeingKnowledgable__interactArea">
+      <div class="BeingKnowledgable__technologiesContainer">
+      <% each(technologies, function (tech) { %>
+        <%= technologyTemplate(tech) %>
+      <% }) %>
+      </div>
+      <div class="BeingKnowledgable__descriptionsContainer">
+      <% each(descriptions, function (desc) { %>
+        <%= descriptionTemplate(desc) %>
+      <% }) %>
+      </div>
+    </div>
+    <div class="BeingKnowledgable__outro">
+      <p>The type of technology used depends on what is best suited to each area taking existing infrastructure into consideration.</p>
+      <p>Speak to your employer to find out which technology you will be working with.</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.RepresentingNBNSectionSummary__content,
+.RepresentingNBNSectionSummary__tickContainer {
+  height: 100%;
+}
+
+.RepresentingNBNSectionSummary__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 65%;
+  float: right;
+  padding-left: 2rem;
+
+  p {
+    margin-bottom: 0.6em;
+  }
+}
+
+.RepresentingNBNSectionSummary__tickContainer {
+  width: 35%;
+  float: left;
+}
+
+.RepresentingNBNSectionSummary__tick {
+  backgroundContain(url(@import '~images/tickDisc600.png'));
+  size(100%);
+  margin: 0 auto;
+  max-width: 22rem;
+}
+
+.RepresentingNBNSectionSummary__miniDashboardContainer {
+  margin-bottom: 1rem;
+}
+
+.RepresentingNBNSectionSummary__continueButton {
+  continueButton(10em);
+  position: absolute;
+  left: 50%;
+  bottom: 3vh;
+  margin-left: -5em;
+}
+
+@media (max-width: breakpointMobile) {
+  .RepresentingNBNSectionSummary__content,
+  .RepresentingNBNSectionSummary__tickContainer {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+
+  .RepresentingNBNSectionSummary__title {
+    text-align: center;
+  }
+
+  .RepresentingNBNSectionSummary__content {
+    height: auto;
+    text-align: center;
+    padding: 0;
+
+    ul {
+      text-align: left;
+    }
+  }
+
+  .RepresentingNBNSectionSummary__tickContainer {
+    height: 30vh;
+    min-height: 8rem;
+  }
+
+  .RepresentingNBNSectionSummary__miniDashboardContainer {
+    text-align: center;
+  }
+}

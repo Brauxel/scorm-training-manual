@@ -1,0 +1,150 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.VehicleBrandingSignageMobile .Activity__contentContainer {
+  flexCenter(column);
+  size(100%);
+}
+
+.VehicleBrandingSignageMobile__title {
+  text-align: center;
+}
+
+.VehicleBrandingSignageMobile__question {
+  font-size: 0.94rem;
+  max-width: 40rem;
+  margin: 0 auto 1vh;
+  text-align: center;
+}
+
+.VehicleBrandingSignageMobile__scene {
+  backgroundCover(url('./sceneMobile.jpg'));
+  size(90vw, 1.33 * 90vw);
+  position: relative;
+}
+
+.VehicleBrandingSignageMobile__clickable {
+  positionAbs();
+  cursor: pointer;
+
+  &_hasClick:after {
+    backgroundContain(url(@import '~images/tickFill80.png'));
+    positionAbs(auto, 0px, 0px, auto);
+    size(1.6rem);
+    border-radius: 50%;
+    content: ' ';
+    box-shadow: 0 0 2px black;
+  }
+}
+
+.VehicleBrandingSignageMobile__clickable[data-key="barrier"] {
+  top: 66%;
+  right: 68%;
+  bottom: 16%;
+  left: 6%;
+}
+
+.VehicleBrandingSignageMobile__clickable[data-key="stickigrip"] {
+  top: 13%;
+  right: 31%;
+  bottom: 73%;
+  left: 43%;
+}
+
+.VehicleBrandingSignageMobile__clickable[data-key="aframe"] {
+  top: 71%;
+  right: 3%;
+  bottom: 1%;
+  left: 62%;
+}
+
+.VehicleBrandingSignageMobile__dropTarget .dropTarget__dragableContainer {
+  positionAbs(0px, 0px, 0px, 0px);
+
+  .VehicleBrandingSignageMobile__dragable {
+    positionAbs(0.4rem, 0.4rem, 0.4rem, 0.4rem);
+    size(auto);
+    cursor: default;
+  }
+}
+
+[data-dragkey="barrier"] .VehicleBrandingSignageMobile__dragable {
+
+}
+
+[data-dragkey="magnetic"] .VehicleBrandingSignageMobile__dragable {
+  transform: scale(0.8) rotateZ(-2deg);
+}
+
+[data-dragkey="aframe"] .VehicleBrandingSignageMobile__dragable {
+  transform: scale(1.4);
+}
+
+.VehicleBrandingSignageMobile__infoPanel {
+  positionAbs(12rem, 0px, 0px, 0px);
+  transition: opacity 0.2s ease-out;
+  z-index: 2;
+  padding: 0.6rem;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+
+  &.visible {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+.VehicleBrandingSignageMobile__infoPanelContent {
+  background-color: white;
+  border-radius: 1.4rem;
+  box-shadow: 0 0 4px rgba(black, 0.2);
+  overflow: hidden;
+}
+
+.VehicleBrandingSignageMobile__infoPanel__title,
+.VehicleBrandingSignageMobile__infoPanel__description,
+.VehicleBrandingSignageMobile__infoPanel__closeContainer {
+  padding: 0.8rem;
+}
+
+.VehicleBrandingSignageMobile__infoPanel__title {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.VehicleBrandingSignageMobile__infoPanel__figure {
+  backgroundContain();
+  background-size: auto 60%;
+  height: 34vh;
+}
+
+.VehicleBrandingSignageMobile__infoPanel__description {
+  font-size: 0.94rem;
+}
+
+.VehicleBrandingSignageMobile__infoPanel__closeContainer {
+  positionRel();
+  size(100%, 3rem);
+  background-color: colBlue;
+  cursor: pointer;
+}
+
+.VehicleBrandingSignageMobile__infoPanel__close {
+  positionAbs(50%, 0.8rem, auto, auto);
+  size(2rem);
+  line-height: 2rem;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  display: block;
+  background-color: rgba(white, 0.2);
+  border-radius: 50%;
+  font-size: 1.6rem;
+  margin-top: -1rem;
+  float: right;
+  z-index: 99;
+}
+

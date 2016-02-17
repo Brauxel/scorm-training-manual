@@ -1,0 +1,52 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.Modal {
+  flexCenter(column);
+  positionAbs(mastheadHeight, 100%, 100%, 0px);
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out;
+  overflow: hidden;
+  background-color: rgba(white, 0.6);
+  transform: translateY(2%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99;
+
+  &.Modal_show {
+    bottom: 0px;
+    right: 0px;
+    padding: 2rem;
+    transform: translateY(0);
+    pointer-events: all;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  @media (max-width: breakpointMobile) {
+    top: mastheadHeightMobile;
+  }
+}
+
+.Modal__content {
+  font-weight: 400;
+  width: 99%;
+  padding: 1.6rem;
+  color: white;
+  border-radius: 1rem;
+  background-color: rgba(colBlue, 0.9);
+  box-shadow: 0px 0px 4px rgba(black, 0.4);
+  max-width: 40em;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 0.6em;
+  }
+}
+
+.Modal__title {
+  fontDisplay();
+  font-size: 1.6em;
+  margin-bottom: 0.6em
+}

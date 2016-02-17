@@ -1,0 +1,110 @@
+@import 'nib/clearfix';
+@import '~styles/vars';
+@import '~styles/mixins';
+
+
+@media (max-width: breakpointMobile) {
+  .UniformsHSE__questionsContainer,
+  .UniformsHSE__feedbackPanelContainer {
+    float: none;
+    clear: both;
+  }
+
+  .UniformsHSE__feedbackPanelContainer {
+    positionFixed(mastheadHeightMobile, auto, auto, 5%);
+    width: 90%;
+    background-color: rgba(black, 0.9);
+    z-index: 99;
+    height: 0px;
+    min-height: 0;
+    overflow: scroll;
+    opacity: 0;
+    padding: 1.4rem;
+
+    &.panelVisible {
+      height: auto;
+      bottom: 1%;
+      opacity: 1;
+    }
+
+    .UniformsHSE__inSummaryState & {
+      positionAbs(-20rem, 0px, auto, 0px);
+      width: auto;
+      height: 17rem;
+      opacity: 1;
+      padding: 0.4rem;
+      background-color: transparent;
+    }
+  }
+
+  .UniformsHSE__questionTitle {
+    .UniformsHSE__inSummaryState & {
+      margin-top: 17rem;
+    }
+  }
+
+  .UniformsHSE__feedbackPanel {
+    positionRel();
+    background-color: transparent;
+  }
+
+  .UniformsHSE__feedback,
+  .UniformsHSE__summaryFeedback {
+    font-size: 0.94rem;
+  }
+
+  .UniformsHSE__interactArea {
+    width: calc(100% + 1.6rem);
+    margin: 0 0 0 -0.8rem;
+  }
+
+  .UniformsHSE__questionsContainer {
+    size(100%, auto);
+    min-height: 0;
+    margin: 0 auto;
+  }
+
+  .UniformsHSE__questionOptionContainer {
+    padding: 0 0.06rem;
+    height: 11rem;
+  }
+
+  .UniformsHSE__summary_visible {
+    height: auto;
+  }
+
+  .UniformsHSE__summaryPanelContainer {
+    width: 100%;
+    height: auto;
+
+    &:first-child {
+      height: auto;
+    }
+  }
+
+  .UniformsHSE__summaryPanel__figure {
+    height: 20vh;
+  }
+
+  .UniformsHSE__questionSubmit {
+    positionRel();
+    transition: none;
+    margin: 1rem auto 0;
+
+    &.hidden {
+      display: block;
+      width: 0px;
+      overflow: hidden;
+    }
+
+    .UniformsHSE__inSummaryState & {
+      display: none;
+    }
+  }
+
+  .UniformsHSE__summaryPanel__captionContent {
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    line-height: 1.1;
+  }
+}

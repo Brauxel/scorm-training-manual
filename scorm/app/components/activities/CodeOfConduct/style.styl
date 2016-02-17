@@ -1,0 +1,110 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.CodeOfConduct {
+  backgroundCover(url('./background.jpg'));
+}
+
+.CodeOfConduct__content,
+.CodeOfConduct__imageContainer {
+  height: 100%;
+}
+
+.CodeOfConduct__subheading {
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.CodeOfConduct__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding-right: 1em;
+  width: 70%;
+  float: left;
+  font-size: 1rem;
+
+  p, ul {
+    margin-left: 1.2em;
+  }
+
+  li {
+    positionRel();
+    list-style-type: none;
+    padding-left: 1em;
+    margin-left: -1em;
+
+    &:before {
+      positionAbs(0px, auto, auto, 0px);
+      content: '-';
+    }
+  }
+}
+
+.CodeOfConduct__codeContent {
+  position: relative;
+  padding-bottom: 1.4vh;
+  margin-bottom: 2vh;
+
+  &:after {
+    positionAbs(auto, auto, 0px, 1.2em);
+    size(8%, 1px);
+    content: ' ';
+    background-color: colBody;
+  }
+}
+
+.CodeOfConduct__imageContainer {
+  backgroundContain(url('./figure.png'));
+  width: 30%;
+  float: right;
+}
+
+.CodeOfConduct.ContentPanel_reverseContent {
+  .CodeOfConduct__content {
+    float: right;
+    padding-left: 1rem;
+  }
+
+  .CodeOfConduct__imageContainer {
+    float: left;
+  }
+}
+
+@media (max-width: breakpointMobile) {
+  .CodeOfConduct__subheading {
+    text-align: center;
+  }
+
+  .CodeOfConduct__codeContent {
+    margin-bottom: 3.4vh;
+    padding-bottom: 4vh;
+    &:after {
+      left: 50%;
+      margin-left: -4%;
+    }
+  }
+
+  .CodeOfConduct__content,
+  .CodeOfConduct__imageContainer {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+
+  .CodeOfConduct__content {
+    height: auto;
+    margin-bottom: 4vh;
+
+    .ContentPanel__title {
+      text-align: center;
+    }
+  }
+
+  .CodeOfConduct__imageContainer {
+    height: 40vh;
+  }
+}

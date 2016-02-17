@@ -1,0 +1,49 @@
+@import 'nib/clearfix';
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.BrandAttributes {
+  backgroundCover();
+  background-image: url('./background.jpg');
+}
+
+.BrandAttributes__title {
+  text-align: center;
+}
+
+.BrandAttributes__instructions {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+
+.BrandAttributes__panelGridContainer {
+  position: relative;
+  width: 100%;
+  height: 58vh;
+  margin: 0 auto;
+  font-size: 0.9em;
+
+  .PanelGrid__panel__figure {
+    left: 60%;
+  }
+
+  .PanelGrid__panel__caption {
+    right: 40%;
+  }
+}
+
+@media (max-width: breakpointMobile) {
+
+  .BrandAttributes__panelGridContainer {
+    height: auto;
+
+    .PanelGrid__panel__figure {
+      left: auto;
+    }
+
+    .PanelGrid__panel__caption {
+      right: auto;
+    }
+  }
+}
+

@@ -1,0 +1,102 @@
+<div class="ContentPanel__title UniformsHSE__title">Uniforms and HSE items</div>
+
+<!--  -->
+<div class="UniformsHSE__intro">
+  Representing <span class="nbnMention">nbn</span> as a positive brand means you will have to present yourself well. Your overall presentation can be the difference between a positive and negative customer&nbsp;experience, so make sure you are clean and tidy.
+</div>
+<!--  -->
+
+<div class="UniformsHSE__questionTitle">&nbsp;</div>
+
+<div class="UniformsHSE__interactArea">
+  <!--  -->
+  <div class="UniformsHSE__questionsContainer">
+    <% each(questions, function (question) { %>
+    <div class="UniformsHSE__question" data-key="<%= question.key %>">
+      <div class="
+        UniformsHSE__questionOptionsContainer
+        <%= question.requiredKeys.length > 1 ? ' multiSelect' : '' %>
+      ">
+
+        <% each(question.options, function (option) { %>
+        <div class="UniformsHSE__questionOptionContainer">
+          <div class="UniformsHSE__questionOption" data-key="<%= option.key %>">
+            <div
+              class="UniformsHSE__questionOption__imageContainer"
+              style="background-image: url(<%= option.figure %>)"
+            ></div>
+            <div class="UniformsHSE__questionOption__selectContainer">
+              <div class="flexContentWrapper">
+                <div class="UniformsHSE__questionOption__selectButton">Select</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <% }) %>
+    <div class="UniformsHSE__summary">
+    <% each(summaryPanels, function(panel, index) { %>
+      <div class="UniformsHSE__summaryPanelContainer">
+        <div class="UniformsHSE__summaryPanel" data-key="<%= panel.key %>">
+          <div
+            class="UniformsHSE__summaryPanel__figure"
+            style="background-image: url(<%= panel.figure %>)"
+          >
+            &nbsp;
+          </div>
+          <div class="UniformsHSE__summaryPanel__caption">
+            <div class="UniformsHSE__summaryPanel__captionNumber">
+              <%= index + 1 %>
+            </div>
+            <div class="UniformsHSE__summaryPanel__captionContent">
+              <%= panel.caption %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+    </div>
+  </div>
+  <!--  -->
+
+  <!--  -->
+  <div class="UniformsHSE__feedbackPanelContainer">
+    <div class="UniformsHSE__feedbackPanel">
+
+      <div class="UniformsHSE__progressMeterContainer">
+        <!-- Sub view -->
+      </div>
+      <div class="UniformsHSE__scoreContainer">
+        Score: <span class="UniformsHSE__score"><%= renderScore() %></span>
+      </div>
+      <div class="UniformsHSE__feedbackContainer">
+        <% each(['correct', 'incorrect'], function (type) { %>
+        <div class="UniformsHSE__feedback UniformsHSE__<%= type %>Feedback">
+          <div class="UniformsHSE__feedbackMessage"></div>
+          <% if (type === 'incorrect') { %>
+            <div class="UniformsHSE__feedback__noPoints">
+              You haven't scored a point here.
+            </div>
+          <% } %>
+          <div class="UniformsHSE__feedbackButton">
+            <%= type === 'correct' ? 'Next' : 'Got it!' %>
+          </div>
+        </div>
+        <% }) %>
+        <div class="UniformsHSE__feedback UniformsHSE__summaryFeedback">
+          <div class="UniformsHSE__feedbackMessage"></div>
+          <div class="UniformsHSE__restartButton">Go again?</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--  -->
+
+  <div class="UniformsHSE__questionSubmit">
+    Check answer
+  </div>
+
+</div>

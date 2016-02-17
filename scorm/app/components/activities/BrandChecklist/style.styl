@@ -1,0 +1,64 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.BrandChecklist {
+  backgroundCover();
+  background-image: url('./background.jpg');
+  color: white;
+}
+
+.BrandChecklist__title {
+  color: white;
+  text-align: center;
+}
+
+.BrandChecklist__intro {
+  text-align: center;
+}
+
+.BrandChecklist__content {
+  flexCenter(column);
+  height: 100%;
+  position: relative;
+}
+
+.BrandChecklist__checklistContainer {
+  flexCenter(column);
+  padding: 2rem;
+  background-color: rgba(black, 0.3);
+  align-items: flex-start;
+}
+
+.BrandChecklist__checklistTitle {
+  fontDisplay(400);
+}
+
+.BrandChecklist__checklist {
+  checklist();
+
+  li {
+    padding-left: 1.6rem;
+  }
+
+  li:before {
+    backgroundContain(url(@import '~images/checkMarkSmallWhite.png'));
+    size(1rem);
+    top: 0.2em;
+    content: ' ';
+  }
+}
+
+.BrandChecklist__checklistMessage {
+  margin-top: 0.8rem;
+  padding-top: 2rem;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    positionAbs(0, 60%, auto, 0);
+    height: 2px;
+    background-color: colBlue;
+  }
+}
+
+

@@ -1,0 +1,78 @@
+@import 'nib/clearfix';
+@import '~styles/mixins';
+@import '~styles/vars';
+
+dim = 4vw;
+maxDim = 2.4rem;
+minDim = 2.2rem;
+
+
+.MiniDashboard {
+  clearfix();
+  height: dim;
+  min-height: minDim;
+  max-height: maxDim;
+  display: inline-block;
+}
+
+.MiniDashboardItem,
+.MiniDashboardConnector {
+  float: left;
+  position: relative;
+}
+
+.MiniDashboardItem {
+  size(dim);
+  minSize(minDim);
+  maxSize(maxDim);
+  background-color: rgba(colGreyPale, 0.6);
+  box-shadow: 0 0 2px rgba(black, 0.2);
+  border-radius: 50%;
+  display: block;
+
+  z-index: 2;
+}
+
+.MiniDashboardItem_complete:before {
+  backgroundContain(url(@import '~images/tickFill80.png'));
+  positionAbs(auto, 0px, 0px, auto);
+  size(0.9rem);
+  border-radius: 50%;
+  box-shadow: 0 0 1px rgba(black, 0.2);
+  content: ' ';
+  margin: 0 -0.2rem 0.2rem 0;
+  z-index: 2;
+}
+
+.MiniDashboardConnector {
+  size(dim * 0.4, dim);
+  minSize(minDim * 0.4, minDim);
+  maxSize(maxDim * 0.4, maxDim);
+
+  &:after {
+    positionAbs(50%, 0, auto, 0);
+    content: ' ';
+    height: 2px;
+    margin-top: -1px;
+    background-color: rgba(#aaa, 0.42);
+  }
+}
+
+.MiniDashboardItem__figure {
+  flexCenter();
+  fontDisplay(400);
+  size(84%);
+  positionAbs(50%, auto, auto, 50%);
+  margin: -42% 0 0 -42%;
+  color: white;
+  background-color: rgba(#aaa, 0.52);
+  border-radius: 50%;
+
+  .MiniDashboardItem_complete & {
+    background-color: rgba(colBlue, 0.62);
+  }
+
+  .MiniDashboardItem_current & {
+    background-color: rgba(colBlue, 1);
+  }
+}
