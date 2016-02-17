@@ -39,6 +39,18 @@
 	 			<file href="scormdriver/goodbye.html" /> 
 	 			<file href="scormdriver/scormdriver.js" />
 				<file href="scormdriver/browsersniff.js" />
+	 			<file href="scormcontent/about-us.html" /> 
+	 			<file href="scormcontent/after-the-race.html" /> 
+	 			<file href="scormcontent/home-page.html" /> 
+	 			<file href="scormcontent/raceday.html" /> 
+	 			<file href="scormcontent/race-preparation.html" /> 
+	 			<file href="scormcontent/stud-to-sale.html" /> 
+	 			<file href="scormcontent/training-at-flemington.html" /> 
+	 			<file href="scormcontent/training-at-flemington-2.html" /> 
+	 			<file href="scormcontent/typical-training-day.html" /> 
+	 			<file href="scormcontent/what's-involved-in-training.html" /> 
+	 			<file href="scormcontent/winners-circle.html" /> 
+	 			<file href="scormcontent/assets/typical-training-day.html" /> 
 		</resource>
 	</resources>
 </manifest>
