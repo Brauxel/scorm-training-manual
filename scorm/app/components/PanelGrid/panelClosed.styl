@@ -1,0 +1,53 @@
+@import '~styles/mixins';
+@import '~styles/vars';
+
+.PanelGrid__panel__figureThumbnail {
+  backgroundContain();
+  size(100%, calc(100% - 2.6rem));
+  background-color: white;
+}
+
+.PanelGrid__panel__previewTitle {
+  flexCenter(column);
+  size(100%, 2.6rem);
+  line-height: 1.1;
+  color: white;
+  padding: 0 1rem;
+  background-color: colBlue;
+  position: relative;
+
+   &:after {
+    backgroundCenter(url(@import '~images/arrowheadRightWhite.png'));
+    positionAbs(50%, 0.4rem, auto, auto);
+    size(2rem);
+    background-size: auto 60%;
+    margin-top: -1rem;
+    background-color: rgba(colGreyPale, 0.2);
+    border-radius: 50%;
+    content: ' ';
+    z-index: 99;
+  }
+
+  .PanelGrid__panel_viewed:not(.PanelGrid__panel_current) & {
+    &:before {
+      backgroundContain(url(@import '~images/tickFill80.png'));
+      positionAbs(50%, auto, auto, 0.4rem);
+      size(2rem);
+      border-radius: 50%;
+      margin-top: -1rem;
+      content: ' ';
+    }
+  }
+}
+
+.PanelGrid__panel__previewTitleContent {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+@media (max-width: breakpointMobile) {
+  .PanelGrid__panel__figureThumbnail {
+    width: 100%;
+    height: 40vh;
+  }
+}

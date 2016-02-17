@@ -1,0 +1,27 @@
+<div class="ContentPanel__title YourRoleMobile__title">Your role</div>
+<div class="YourRoleMobile__mainContentContainer YourRoleMobile__mainContent_hidden">
+  <div class="YourRoleMobile__intro">
+    <p>The <span class="nbnMention">nbn</span>™ network aspires to open up a world of possibilities across areas such as education, business, health and entertainment.</p>
+    <p>What’s your role in delivering these aspirations? <strong>Tap the highlighted images below to find out more:</strong></p>
+  </div>
+  <div class="YourRoleMobile__interactArea">
+    <div class="YourRoleMobile__network">
+      <div class="YourRoleMobile__networkImage"></div>
+      <% each(clickItems, function (item, index) { %>
+        <div
+          class="YourRoleMobile__clickable"
+          data-key="<%= item.key %>"
+        ></div>
+      <% }) %>
+    </div>
+    <div class="YourRoleMobile__clickMessagesContainer">
+      <% each(clickItems, function (item) { %>
+      <div class="YourRoleMobile__clickMessage" data-key="<%= item.key %>">
+        <%= item.message %>
+        <div class="YourRoleMobile__videoLink" data-videoID=<%= item.videoID %>><%= item.videoLinkText %></div>
+        <div class="YourRoleMobile__clickMessage__closeButton">&times;</div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</div>

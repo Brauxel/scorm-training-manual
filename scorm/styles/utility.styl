@@ -1,0 +1,22 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.nbnMention {
+  fontDisplay(700);
+}
+
+// ie10 flex content width fix
+.flexContentWrapper {
+  width: 99%;
+}
+
+.dragable {
+  transition: all 0.4s ease-out;
+  cursor: move;
+  z-index: 99;
+
+  &.isDragging {
+    transition: none;
+    z-index: 109;
+  }
+}

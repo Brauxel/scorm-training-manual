@@ -1,0 +1,925 @@
+@charset "utf-8";
+/* 
+	CSS Document for 
+	Victoria Racing Club: Training Manaual
+	By: Aakash Bhatia
+	Email: akash.bhatia1184@gmail.com
+	URI: http://www.thebrauxelcode.com/
+*/
+
+/*-------------------------------------------------------------------------------------	
+	0.	CSS Resets
+	1.	Global Styles
+	2.  Index Page Styles
+-------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	0.	CSS Resets
+/*-----------------------------------------------------------------------------------*/
+* {
+	margin:0px;
+	padding:0px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+   display:block;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	1.	Global Styles
+/*-----------------------------------------------------------------------------------*/
+/* Elements */
+body {
+	background:no-repeat center center fixed;
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family:Arial, sans-serif;
+	font-size:20px;
+	line-height:24px;
+	color:#3d3b3b;
+}
+
+a {
+	outline:none;
+	transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+	color:inherit;
+	text-decoration:none;
+}
+	a:hover {
+		opacity:0.8;
+	}
+	
+p {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+	
+h1 {
+	font-size:32px;
+	line-height:44px;
+	color:#ec3a94;
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-size:30px;
+	line-height:40px;
+	color:#155f9c;
+	font-family:Helvetica, Arial, sans-serif;
+	font-weight:500;
+}
+
+h3 {
+	font-size:21px;
+	line-height:50px;
+	color:#fff;
+	background-color:#272324;
+	font-family:Helvetica, Arial, sans-serif;
+}
+
+h4 {
+	display:block;
+	width:184px;
+	height:51px;
+	line-height:51px;
+	color:#fff;
+	padding-left:20px;
+	font-family:Arial, sans-serif;
+	font-weight:600;
+	font-size:22px;
+}
+
+
+/* Classes */
+.wrap {
+	width:984px;
+	position:relative;
+	margin:0 auto;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.clear {
+	clear:both;
+}
+
+.superhide {
+	display:none !important;
+}
+
+/* IDs */
+#content {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+/*  Header Styles */
+#logo {
+	background-color:#FFF;
+	background-image:url(../images/victoria-racing-club.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	display:block;
+	text-indent:-1000px;
+	overflow:hidden;
+	width:370px;
+	height:95px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(204,204,204,0.9);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(204,204,204,0.9);
+	box-shadow: 0px 5px 5px 0px rgba(204,204,204,0.9);
+	float:left;
+}
+
+.header-menu {
+	list-style-type:none;
+	float:right;
+	margin-top:33px;
+}
+	.header-menu li {
+		float:left;
+		margin-left:25px;
+	}
+		.header-menu li a {
+			background-position:center center;
+			background-repeat:no-repeat;
+			overflow:hidden;
+			text-indent:-1000px;
+			height:75px;
+			width:75px;
+			display:block;
+		}
+			.header-menu li a.home-icon {
+				background-image:url(../images/header/home.png);
+			}
+			.header-menu li a.help-icon {
+				background-image:url(../images/header/help.png);
+			}
+			.header-menu li a.glossary-icon {
+				background-image:url(../images/header/glossary.png);
+			}
+			.header-menu li a.stud-to-sale-indicator {
+				background-image:url(../images/stud-to-sale/stud-to-sale.png);
+				background-repeat:no-repeat;
+				background-position:center center;
+				width:135px;
+				height:35px;
+				line-height:22px;
+				display:block;
+				color:#17649d;
+				text-indent:0px;
+				font-size:16px;
+				line-height:18px;
+				text-align:right;
+				padding-top:15px;
+				cursor:default;
+				margin-top:15px;
+			}
+/*-----------------------------------------------------------------------------------*/
+/*	1.	Index Page Styles
+/*-----------------------------------------------------------------------------------*/
+.landing-page {
+	background-image:url(../images/landing-page/background.jpg);
+}
+	.landing-page #content {
+		text-align:right;
+	}
+	.landing-page h1 {
+		font-size:48px;
+		line-height:64px;
+	}
+	.landing-page a.start-here {
+		background-image:url(../images/landing-page/start-here-line.png);
+		background-repeat:no-repeat;
+		background-position:left 80%;
+		display:inline-block;
+		text-indent:-1000px;
+		overflow:hidden;
+		width:100px;
+		height:25px;
+		margin-top:37px;
+		position:relative;
+		padding-right:250px;
+		padding-top:100px;
+		color:#17649d;
+	}
+		.landing-page a.start-here .img-holder {
+			position:absolute;
+			height:125px;
+			width:125px;
+			right:0px;
+			top:0px;
+		}
+/*-----------------------------------------------------------------------------------*/
+/*	2.	About Us Page Styles
+/*-----------------------------------------------------------------------------------*/
+.about-us {
+}
+	.about-us #content {
+		text-align:center;
+	}
+		.about-us #content p {
+			text-align:left;
+			width:745px;
+			margin:0 auto;
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+	.about-us a.start-here {
+		display:block;
+		width:70px;
+		height:70px;
+		margin:0 auto;
+	}
+/*-----------------------------------------------------------------------------------*/
+/*	3.	Home Page Styles
+/*-----------------------------------------------------------------------------------*/
+.home-page {
+	background-image:url(../images/home-page/background.jpg);
+}
+	.home-page #content {
+	}
+	.home-page .page-description {
+		width:370px;
+		float:left;
+	}
+nav {
+	margin-top:50px;
+}
+	nav .active {
+		opacity:1;
+	}
+	nav .inactive {
+		opacity:0.5;
+	}
+		nav .inactive a {
+			cursor:default !important;
+		}
+
+.heart-beat {
+	min-height:101px;
+	margin-left:152px;
+	position:absolute;
+	z-index:99;
+	top:0px;
+	opacity:0.8;
+}
+.menu-row-single {
+	width:542px;
+	padding-right:40px;
+	float:right;
+	min-height:124px;
+	position:relative;
+}
+.menu-row {
+	width:900px;
+	float:right;
+	margin-top:20px;
+}
+.menu-row .menu-column {
+	position:relative;
+	width:50%;
+}
+
+a.winners-circle {
+	background-image:url(../images/home-page/winners-circle.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	display:block;
+	height:60px;
+	width:390px;
+	text-align:right;
+	padding-top:20px;
+	margin-left:55px;
+	margin-top:20px;
+	color:#17649d;
+}
+a.back-to-races {
+	background-image:url(../images/home-page/back-to-races.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	display:block;
+	height:79px;
+	width:368px;
+	text-align:left;
+	padding-top:10px;
+	margin-left:55px;
+	margin-top:20px;
+	color:#17649d;
+}
+a.stud-to-sale {
+	background-image:url(../images/home-page/stud-to-sale.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	display:block;
+	height:79px;
+	width:260px;
+	text-align:right;
+	padding-top:30px;
+	margin-left:187px;
+	margin-top:20px;
+	color:#17649d;
+}
+a.raceday {
+	background-image:url(../images/home-page/raceday.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	display:block;
+	height:79px;
+	width:331px;
+	text-align:left;
+	padding-top:30px;
+	margin-left:55px;
+	margin-top:20px;
+	color:#17649d;
+}
+a.training-at-flemington {
+	background-image:url(../images/home-page/training-at-flemington.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	display:block;
+	height:79px;
+	width:260px;
+	text-align:right;
+	padding-top:20px;
+	margin-left:187px;
+	margin-top:20px;
+	color:#17649d;
+}
+a.race-preparation {
+	background-image:url(../images/home-page/race-preparation.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	display:block;
+	height:99px;
+	width:246px;
+	text-align:right;
+	padding-top:80px;
+	margin-left:150px;
+	margin-top:0px;
+	color:#17649d;
+}
+
+.instructions {
+	background-color:rgba(0, 0, 0, 0.6);
+	color:#fff;
+	font-size:18px;
+	line-height:22px;
+	width:480px;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	display:none;
+	-webkit-border-top-right-radius: 30px;
+	-moz-border-radius-topright: 30px;
+	border-top-right-radius: 30px;	
+}
+	.instructions h3 {
+		padding-left:30px;
+		-webkit-border-top-right-radius: 30px;
+		-moz-border-radius-topright: 30px;
+		border-top-right-radius: 30px;	
+	}
+	.instructions p {
+		padding-left:30px;
+		padding-top:20px;
+		padding-bottom:20px;
+		width:280px;
+		float:left;
+	}
+	.instructions img {
+		float:right;
+		margin-right:30px;
+		margin-left:15px;
+		margin-top:40px;
+	}
+	.instructions p span.tick {
+		background-image:url(../images/home-page/tick.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		width:21px;
+		height:21px;
+		display:inline-block;
+	}
+	
+/*-----------------------------------------------------------------------------------*/
+/*	4.	Stud to Sale Page Styles
+/*-----------------------------------------------------------------------------------*/
+.stud-to-sale {
+	background-image:url(../images/stud-to-sale/background.jpg);
+}
+	.stud-to-sale .instructions {
+		top:130px;
+		right:0;
+		left:auto;
+		height:200px;
+		width:420px;
+		-webkit-border-top-right-radius:0px;
+		-moz-border-radius-topright:0px;
+		border-top-right-radius:0px;		
+		-webkit-border-top-left-radius: 30px;
+		-moz-border-radius-topleft: 30px;
+		border-top-left-radius: 30px;
+	}
+		.stud-to-sale .instructions h3 {
+			-webkit-border-top-right-radius:0px;
+			-moz-border-radius-topright:0px;
+			border-top-right-radius:0px;		
+			-webkit-border-top-left-radius: 30px;
+			-moz-border-radius-topleft: 30px;
+			border-top-left-radius: 30px;
+		}
+		.stud-to-sale .instructions p {
+			float:right;
+			padding-left:10px;
+			padding-right:30px;
+		}
+		.stud-to-sale .instructions img {
+			float:left;
+			margin-right:15px;
+			margin-left:30px;
+		}
+	.stud-to-sale .instruction-set-activity, .stud-to-sale .instruction-set-final	{
+		text-align:center;
+	}
+		.stud-to-sale .instruction-set-activity img, .stud-to-sale .instruction-set-final img {
+			float:none;
+			margin:0 auto;
+			margin-top:33px;
+		}
+			.stud-to-sale .instruction-set-final img.in-image {
+				float:none;
+				margin:0px;
+				margin-top:5px;
+				display:inline-block;
+			}
+	.stud-to-sale #content {
+	}
+	.stud-to-sale .page-description {
+		width:702px;
+		float:left;
+	}
+	.stud-to-sale .activities-layout section {
+		margin-top:30px;
+	}
+		.stud-to-sale .activities-layout section h4 {
+			-webkit-border-top-right-radius: 10px;
+			-moz-border-radius-topright: 10px;
+			border-top-right-radius: 10px;
+			background: -webkit-linear-gradient(left, #449BB0, #4481B0); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(right, #449BB0, #4481B0); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(right, #449BB0, #4481B0); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(to right, #449BB0, #4481B0); /* Standard syntax (must be last) */
+		}
+	.stud-to-sale .activities-layout .activities-layout-content {
+	}
+	.stud-to-sale .activities-layout .activities-layout-content .image {
+		float:left;
+		background-color:#FFF;
+		padding-top:15px;
+		padding-bottom:15px;
+	}
+	.stud-to-sale .activities-layout .activities-layout-content .image img {
+		display:block;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+		margin-left:10px;
+		background-color:#FFF;
+	}
+	.stud-to-sale .activities-layout .activities-layout-content .content {
+		float:left;
+		padding-left:18px;
+		padding-right:18px;
+		padding-top:15px;
+		padding-bottom:15px;
+		background-color:#FFF;
+		min-height:120px;
+		min-width:200px;
+		-webkit-border-top-right-radius: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+		-moz-border-radius-topright: 10px;
+		-moz-border-radius-bottomright: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	
+	.stud-to-sale .activities-layout .activities-layout-content .video-play {
+		height:95px;
+		padding-top:35px;
+		padding-bottom:20px;
+		float:left;
+		width:150px;
+		background-color:#FFF;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		position:relative;
+	}
+		.stud-to-sale .activities-layout .activities-layout-content .video-play .done {
+			position:absolute;
+			top:10px;
+			right:10px;
+			display:none;
+		}
+	
+.video-play-button {
+	background-image:url(../images/stud-to-sale/video-play-button.png);
+	background-repeat:no-repeat;
+	background-position:top center;
+	display:block;
+	height:80px;
+	width:auto;
+	font-size:18px;
+	padding-top:85px;
+	text-align:center;
+	color:#155F9C;
+	margin:0 auto;
+}
+.activities-button {
+	background-image:url(../images/stud-to-sale/activities-button.png);
+}
+	.activities-button.inactive {
+		background-image:url(../images/stud-to-sale/activities-button-inactive.png);
+		cursor:default;
+		color:#CCCCCC;
+	}
+	
+.role-reveal {
+	background: -webkit-linear-gradient(left, #449BB0, #4481B0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #449BB0, #4481B0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #449BB0, #4481B0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #449BB0, #4481B0); /* Standard syntax (must be last) */
+	width:200px;
+	display:block;
+	text-align:center;
+	height:35px;
+	line-height:35px;
+	color:#fff;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	margin-top:20px;
+}
+
+.role-revealed {
+	display:none;
+	text-align:center;
+}
+
+.arrows {
+	width:41px;
+	padding-left:20px;
+	padding-right:20px;
+	height:200px;
+	text-align:center;
+	line-height:200px;
+	display:inline-block;
+	vertical-align:middle;
+	float:left;
+}
+
+.overlay-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1000; /* high z-index */
+	background: -webkit-linear-gradient(left, rgba(68, 155, 176, .8), rgba(68, 129, 176, 0.9)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(68, 155, 176, 0.8), rgba(68, 129, 176, 0.9)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(68, 155, 176, 0.8), rgba(68, 129, 176, 0.9)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(68, 155, 176, 0.8), rgba(68, 129, 176, 0.9)); /* Standard syntax (must be last) */
+}
+    .overlay-content {
+        display: none;
+        background: #fff;
+        padding: 1%;
+        width: 900px;
+        position: absolute;
+        top: 15%;
+        left:45%;
+        margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+        cursor: default;
+        z-index: 10001;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.9);
+    }
+		.overlay-content.video-popup {
+			height:400px;
+			width:640px;
+			left:40%;
+			top:15% !important;
+			background-color:transparent;
+			box-shadow:none;
+		}
+			.overlay-content.video-popup h2 {
+				font-size:24px;
+				color:#FFF;
+			}
+		.overlay-content.full-popup {
+			height:550px;
+			width:880px;
+			left:23%;
+			top:2%;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			padding:30px;
+			font-size:18px;
+			background-image:url(../images/stud-to-sale/activity-bg.jpg);
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size:cover;
+			height:700px;
+		}
+			.overlay-content.full-popup h2 {
+				font-size:24px;
+			}
+			.overlay-content.full-popup .header-menu {
+				margin-top:0px;
+			}
+			.overlay-content.full-popup .header-menu li {
+				margin-left:15px;
+			}
+			.overlay-content.full-popup .header-menu li a {
+				width:50px;
+				height:50px;
+			}
+				.overlay-content.full-popup .header-menu li a.glossary-icon {
+					background-image:url(../images/stud-to-sale/glossary.png);
+				}
+				.overlay-content.full-popup .header-menu li a.help-icon {
+					background-image:url(../images/stud-to-sale/help.png);
+				}
+				.overlay-content.full-popup .header-menu li a.home-icon {
+					background-image:url(../images/stud-to-sale/home.png);
+				}
+				.overlay-content.full-popup .header-menu li a.stud-to-sale-indicator {
+					width:135px;
+					height:35px;
+					margin-top:0px;
+				}
+					.overlay-content.full-popup .header-menu li a.stud-to-sale-indicator:hover {
+						opacity:1;
+					}
+				
+			.overlay-content.full-popup .page-description {
+				width:483px;
+				float:none;
+				margin-top:10px;
+			}
+			.overlay-content.full-popup .instructions {
+				width:388px;
+				position:absolute;
+				right:0px;
+				top:80px;
+				height:171px;
+			}
+				.overlay-content.full-popup .instructions p {
+					padding-left:0px;
+					padding-right:10px;
+					padding-top:0px;
+					padding-bottom:0px;
+					width:323px;
+				}
+				.overlay-content.full-popup .instructions img {
+					margin-left:10px;
+					margin-right:0px;
+					margin-top:10px;
+					margin-bottom:0px;
+				}
+				.overlay-content.full-popup .instructions-stud-to-sale-feedback {
+					background-color:rgba(236, 58, 148, 0.6);
+				}
+				.overlay-content.full-popup .instructions-stud-to-sale-feedback h3 {
+					background-color:#EC3A94;
+				}
+			
+		
+    .close-btn {
+        cursor: pointer;
+		position:absolute;
+		top:-20px;
+		right:-10px;
+		background-image:url(../images/stud-to-sale/close-button.png);
+		background-repeat:no-repeat;
+		background-position:center center;
+		height:50px;
+		width:50px;
+		text-indent:-1000px;
+		overflow:hidden;
+		background-color:transparent;
+		border:0px;
+    }
+
+.activity {
+	margin-top:25px;
+}
+.answers {
+	float:left;
+	margin-left:25px;
+}
+.answer {
+	margin-top:80px;
+}
+.answer-option {
+	background-image:url(../images/stud-to-sale/answers-bg.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	height:40px;
+	width:336px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:20px;
+	margin-top:7px;
+}
+	.answer-option p {
+		margin-top:0px;
+		margin-bottom:0px;
+		font-size:18px;
+		line-height:40px;
+		color:#fff;
+		float:left;
+		margin-right:16px;
+	}
+	.answer-option a {
+		background-repeat:no-repeat;
+		background-position:center center;
+		text-indent:-1000px;
+		overflow:hidden;
+		display:block;
+		float:left;
+		width:40px;
+		height:40px;
+		margin-left:5px;
+		margin-right:5px;
+	}
+	.answer-option a.info {
+		background-image:url(../images/stud-to-sale/info-inactive.png);
+		
+	}
+		.answer-option a.info:hover, .answer-option a.info.active {
+			background-image:url(../images/stud-to-sale/info-active.png);
+		}
+	.answer-option a.select {
+		background-image:url(../images/stud-to-sale/select-inactive.png);
+	}
+		.answer-option a.select:hover, .answer-option a.select.active {
+			background-image:url(../images/stud-to-sale/select-active.png);
+		}
+		.answer-option a.select.wrong {
+			background-image:url(../images/stud-to-sale/wrong-answer.png);
+		}
+		.answer-option a.select.correct {
+			background-image:url(../images/stud-to-sale/correct-answer.png);
+		}
+	.answer-option .activity-arrow {
+		float:left;
+		margin-top:16px;
+    }
+	
+.questions {
+	float:right;
+	margin-right:25px;
+}
+.question {
+	background-image:url(../images/stud-to-sale/questions-bg.png);
+	background-repeat:no-repeat;
+	background-position:top center;
+	width:413px;
+	height:218px;
+	padding-top:60px;
+	padding-left:30px;
+	padding-right:30px;
+	font-size:14px;
+	line-height:18px;
+	display:none;
+}
+	.question p {
+		margin-top:0px;
+		margin-bottom:0px;
+	}
+	.question h3 {
+		background-color:transparent;
+		color:#155F9C;
+		text-align:center;
+		font-size:22px;
+		line-height:26px;
+	}
+	.question h4 {
+		background-color:transparent;
+		color:#155F9C;
+		font-size:22px;
+		line-height:26px;
+		font-weight:normal;
+		text-align:center;
+		width:100%;
+		height:35px;
+	}
+	.question .horse-stats {
+		float:left;
+		padding-top:15px;
+		width:285px;
+	}
+	.question img {
+		float:right;
+	}
+
+.info-block {
+	float:left;
+	margin-top:5px;
+	display:none;
+}
+.info-block img {
+	float:left;
+	margin-top:40px;
+	margin-right:10px;
+	margin-left:35px;
+}
+.info-block p {
+	background:rgba(0,0,0,.7);
+	width:261px;
+	float:left;
+	color:#fff;
+	font-size:16px;
+	line-height:22px;
+	padding:15px;
+	height:90px;
+}
+
+.correct-answer {
+	float:right;
+	background-image:url(../images/stud-to-sale/corrent-answer-bg.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	width:439px;
+	height:200px;
+	padding-top:30px;
+	padding-left:15px;
+	padding-right:15px;
+	margin-right:25px;
+	color:#fff;
+	display:none;
+}
+	.correct-answer p {
+		font-size:16px;
+		line-height:18px;
+	}
+	.correct-answer .continue-button, .correct-answer .closer {
+		font-size:20px;
+		height:28px;
+		line-height:28px;
+		display:block;
+		color:#fff;
+		border:1px solid #FFF;
+		width:128px;
+		text-align:center;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 30px;
+		margin:0 auto;
+	}
+
+/*-----------------------------------------------------------------------------------*/
+/*	5.	Race Preparation Page Styles
+/*-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------*/
+/*	6.	Media Queries
+/*-----------------------------------------------------------------------------------*/	
+@media (max-width: 1024px) {
+	.wrap {
+		width:950px;
+		position:relative;
+		margin:0 auto;
+		padding-left:20px;
+		padding-right:20px;
+	}
+	nav {
+		margin-top:0px;
+	}
+	.overlay-bg {
+		width:1024px;
+	}
+	.menu-row-single {
+		width:540px;
+	}
+	.overlay-content {
+		left:37%;
+	}
+	.stud-to-sale .page-description {
+		width:558px;
+	}
+}

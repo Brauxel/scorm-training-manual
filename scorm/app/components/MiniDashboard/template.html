@@ -1,0 +1,11 @@
+<% each(items, function (item, index, items) { %>
+  <div class="MiniDashboardItem <%= item.className %>">
+    <div class="MiniDashboardItem__figure">
+      <div><%= item.figure %></div>
+    </div>
+  </div>
+  <% if (index !== items.length - 1) { %>
+  <div class="MiniDashboardConnector"></div>
+  <% } %>
+<% }) %>
+

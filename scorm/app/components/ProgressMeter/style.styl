@@ -1,0 +1,29 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.ProgressMeter {
+  position: relative;
+}
+
+.ProgressMeter__track,
+.ProgressMeter__bar,
+.ProgressMeter__barContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ProgressMeter__track {
+  background-color: colGreyPale;
+  transform: translateZ(0);
+}
+
+.ProgressMeter__bar {
+  transition: width 0.4s ease-out;
+  background-color: colBlue;
+  position: absolute;
+  right: auto;
+  transform: translateZ(0);
+}

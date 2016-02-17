@@ -1,0 +1,56 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.MoreContent__content,
+.MoreContent__imageContainer {
+  height: 100%;
+}
+
+.MoreContent__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 60%;
+  float: left;
+  padding-right: 1.4rem;
+}
+
+.MoreContent__imageContainer {
+  backgroundContain();
+  width: 40%;
+  float: right;
+}
+
+.MoreContent.Activity_reverseContent {
+  .MoreContent__content {
+    float: right;
+    padding-left: 1.4rem;
+  }
+
+  .MoreContent__imageContainer {
+    float: left;
+  }
+}
+
+@media (max-width: breakpointMobile) {
+  .MoreContent__content,
+  .MoreContent__imageContainer {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+
+  .MoreContent__content {
+    height: 60%;
+    text-align: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .MoreContent__imageContainer {
+    height: 32vh;
+  }
+}

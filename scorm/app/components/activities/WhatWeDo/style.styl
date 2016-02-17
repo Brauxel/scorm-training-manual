@@ -1,0 +1,74 @@
+@import '~styles/mixins';
+@import '~styles/vars';
+
+.WhatWeDo {
+  backgroundContain();
+  background-image: url('./whatWeDoBackground.jpg');
+  background-size: cover;
+  background-color: black;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (max-width: breakpointMobile) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.WhatWeDo .ContentPanel__title,
+.WhatWeDo__instructions {
+  shadowText();
+  text-align: center;
+  color: white;
+}
+
+.WhatWeDo__instructions {
+  text-shadow: 0 0 2px rgba(black), 0 0 8px rgba(black);
+  padding: 0 1rem 1rem;
+}
+
+.WhatWeDo__panelGridContainer {
+  position: relative;
+  width: 84%;
+  height: 84%;
+  margin: 0 auto;
+}
+
+.WhatWeDo .PanelGrid__panel[data-key="scale"] {
+  .PanelGrid__panel__title {
+    margin-bottom: 0;
+  }
+
+  .PanelGrid__panel__caption__content {
+    p {
+      font-size: 2.2vmin;
+      padding: 0.8em 0 1em;
+      border-bottom: 1px dotted lighten(colBlue, 80%);
+
+      &:last-child {
+        border: none;
+        padding-bottom: 0;
+      }
+    }
+
+    .statEmphasis {
+      color: colBlue;
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: breakpointMobile) {
+  .WhatWeDo__panelGridContainer {
+    height: auto;
+  }
+
+  .WhatWeDo .PanelGrid__panel[data-key="scale"] {
+    .PanelGrid__panel__caption__content {
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+}

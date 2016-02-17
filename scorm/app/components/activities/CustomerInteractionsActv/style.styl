@@ -1,0 +1,86 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.CustomerInteractionsActv {
+  background-color: colBlueDeep;
+}
+
+.CustomerInteractionsActv__contentContainer {
+  flexCenter(column);
+  size(100%);
+}
+
+.CustomerInteractionsActv__title,
+.CustomerInteractionsActv__intro {
+  text-align: center;
+  color: white;
+}
+
+.CustomerInteractionsActv__intro {
+  font-size: 0.94rem;
+  max-width: 36em;
+  margin: 0 auto;
+}
+
+.CustomerInteractionsActv__panelGridContainer {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  margin: 0 auto;
+
+  .PanelGrid__panel__figure,
+  .PanelGrid__panel__figureThumbnail {
+    backgroundCover();
+  }
+}
+
+.PanelGrid__panel[data-key="think"] {
+  .PanelGrid__panel__figureThumbnail,
+  .PanelGrid__panel__figure {
+    background-position: 56% 20%;
+  }
+}
+
+.PanelGrid__panel[data-key="you"] {
+  .PanelGrid__panel__figureThumbnail {
+    background-position: center center;
+  }
+
+  .PanelGrid__panel__figure {
+    background-position: 78% center;
+  }
+}
+
+.PanelGrid__panel[data-key="satisfaction"] {
+  .PanelGrid__panel__figureThumbnail,
+  .PanelGrid__panel__figure {
+    background-position: 52% 48%;
+  }
+}
+
+@media (min-width: breakpointMobile + 1) {
+  .CustomerInteractionsActv__panelGridContainer {
+    font-size: 0.89em;
+
+    .PanelGrid__panel__figure {
+      left: 60%;
+    }
+
+    .PanelGrid__panel__caption {
+      right: 40%;
+    }
+  }
+
+  .CustomerInteractionsActv .PanelGrid__panel_current {
+    top: -20vh !important;
+    bottom: -6vh !important;
+  }
+}
+
+@media (max-width: breakpointMobile) {
+
+  .CustomerInteractionsActv__panelGridContainer {
+    height: auto;
+  }
+}
+

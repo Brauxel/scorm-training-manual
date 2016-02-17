@@ -1,0 +1,64 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+.ProgressMeterWithIndicators {
+  positionRel();
+  overflow: visible;
+  height: 2rem;
+}
+
+.ProgressMeterWithIndicators__progressMeterContainer {
+  positionAbs(((2rem - 0.4rem) / 2), auto, auto, 0px);
+  size(100%, 0.4rem)
+}
+
+.ProgressMeterWithIndicators__indicatorsContainer {
+  positionAbs(50%, 0px, auto, 0px);
+}
+
+.ProgressMeterWithIndicators__progressMeterContainer {
+  z-index: 1;
+
+  .ProgressMeter {
+    size(100%);
+  }
+
+  .ProgressMeter__track {
+    background-color: rgba(colGreyPale, 0.3);
+  }
+}
+
+.ProgressMeterWithIndicators__indicatorsContainer {
+  z-index: 2;
+}
+
+.ProgressMeterWithIndicators__indicator {
+  dim = 0.5rem;
+  transition: all 0.2s ease-out;
+  transition-delay: 0.2s;
+  size(dim);
+  positionAbs(50%, auto, auto, auto);
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: (dim * -0.5) 0 0 (dim * -0.5);
+
+  &:before {
+    transition: all 0.2s ease-out;
+    transition-delay: 0.2s;
+    positionAbs(-1px, -1px, -1px, -1px);
+    border: 1px solid white;
+    content: ' ';
+    border-radius: 50%;
+  }
+
+  &.current {
+    transform: scale(2.4);
+    &:before {
+      opacity: 0.3;
+    }
+  }
+
+  &.reached {
+    background-color: colBlue;
+  }
+}

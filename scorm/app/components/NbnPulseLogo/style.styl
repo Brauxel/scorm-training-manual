@@ -1,0 +1,131 @@
+@import '~styles/vars';
+@import '~styles/mixins';
+
+logoDim = 5rem;
+
+@keyframes pulserAnim {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+@keyframes pulserAnim2 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+.NbnPulseLogo {
+  position: relative;
+}
+
+.NbnPulseLogo__logoContainer {
+  position: absolute;
+  top: -0.5 * logoDim;
+  left: -0.5 * logoDim;
+  width: logoDim;
+  height: logoDim;
+}
+
+.NbnPulseLogo__caption {
+  transform: translateZ(0);
+  transition: all 0.4s ease-out;
+  position: absolute;
+  width: logoDim * 1.5;
+  padding: 0.6em;
+  background-color: colBody;
+  color: white;
+  box-shadow: 0 0 6px rgba(black, 0.6);
+  border-radius: 0.4em;
+  top: -1.2 * logoDim;
+  left: -0.75 * logoDim;
+  text-align: center;
+  pointer-events: none;
+
+  &:after {
+    arrowDown(colBody, 10px);
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+  }
+}
+
+.NbnPulseLogo__logo,
+.NbnPulseLogo__pulser {
+  backgroundContain();
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.NbnPulseLogo__logo {
+  background-image: url('./nbnLogo.png');
+  background-color: colGreyPale;
+  background-size: 80% 80%;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.NbnPulseLogo__pulser {
+  background-image: url('./pulse.png');
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.NbnPulseLogo:hover .NbnPulseLogo__caption {
+  transition: all 0.2s ease-in;
+  overflow: hidden;
+  color: transparent;
+  width: logoDim * 1.1;
+  height: logoDim * 1.1;
+  border-radius: 50%;
+  top: logoDim * -0.55;
+  left: logoDim * -0.55;
+
+  &:after {
+    display: none;
+  }
+}
+
+.NbnPulseLogo.NbnPulseLogo_pulseAnim {
+  .NbnPulseLogo__pulser_1 {
+    animation: pulserAnim 2s ease-out infinite;
+  }
+
+  .NbnPulseLogo__pulser_2 {
+    animation: pulserAnim2 2s ease-out infinite;
+  }
+
+  &:hover {
+    .NbnPulseLogo__pulser_1 {
+      animation: pulserAnim 1s ease-out infinite;
+    }
+
+    .NbnPulseLogo__pulser_2 {
+      animation: pulserAnim2 1s ease-out infinite;
+    }
+  }
+}

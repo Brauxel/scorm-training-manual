@@ -1,0 +1,141 @@
+@import 'nib/clearfix';
+@import '~styles/vars';
+@import '~styles/mixins';
+
+signTypes = 'barrier' 'stickigrip' 'aframe';
+
+.VehicleBrandingSignage .Activity__contentContainer {
+  positionRel();
+  flexCenter(column);
+  size(99%, 100%);
+  max-width: 50rem;
+  margin: 0 auto;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.VehicleBrandingSignage__question {
+  font-size: 0.94rem;
+  max-width: 40rem;
+  margin: 0 auto 1vh;
+  text-align: center;
+}
+
+sceneHeight = 13.4rem;
+sceneWidthMult = 2.5;
+sceneWidth = sceneWidthMult * sceneHeight;
+
+.VehicleBrandingSignage__dragDropContainer {
+  size(calc(100% + 2rem), sceneHeight);
+  margin-left: -1rem;
+  position: relative;
+}
+
+.VehicleBrandingSignage__dragables {
+  positionAbs(0px, auto, 0px, 0px);
+  flexCenter(row);
+  width: 'calc(100% - %s)' % sceneWidth;
+  min-width: 10rem;
+  max-width: 18rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.VehicleBrandingSignage__scene {
+  backgroundCover(url('./scene.jpg'));
+  size(sceneWidth, sceneHeight);
+  positionAbs(0px, 0px, auto, auto);
+}
+
+.VehicleBrandingSignage__dragable {
+  backgroundContain();
+  size(12vmin);
+  margin: 1vmin;
+
+  for sign in signTypes {
+    &[data-dragkey={sign}] {
+      background-image: url('../' + sign + '.png');
+    }
+  }
+}
+
+.VehicleBrandingSignage__dropTarget {
+  positionAbs(0px, 0px, 0px, 0px);
+  background-color: rgba(colGreyPale, 0.6);
+  border-radius: 1rem;
+  border: 2px dashed colBlue;
+
+  &_hasDrop {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.VehicleBrandingSignage__dropTarget[data-dragkey="barrier"] {
+  top: 48%;
+  right: 78%;
+  bottom: 24%;
+  left: 7%;
+}
+
+.VehicleBrandingSignage__dropTarget[data-dragkey="stickigrip"] {
+  top: 39%;
+  right: 22%;
+  bottom: 30%;
+  left: 63%;
+}
+
+.VehicleBrandingSignage__dropTarget[data-dragkey="aframe"] {
+  top: 53%;
+  right: 49%;
+  bottom: 1%;
+  left: 31%;
+}
+
+.VehicleBrandingSignage__dropTarget .dropTarget__dragableContainer {
+  positionAbs(0px, 0px, 0px, 0px);
+
+  .VehicleBrandingSignage__dragable {
+    positionAbs(0.4rem, 0.4rem, 0.4rem, 0.4rem);
+    size(auto);
+    cursor: default;
+  }
+}
+
+for sign in signTypes {
+  .VehicleBrandingSignage__dropTarget[data-dragkey={sign}] {
+    .VehicleBrandingSignage__dragable {
+      background-image: url('../' + sign + 'Dropped.png');
+    }
+  }
+}
+
+.VehicleBrandingSignage__dropTarget[data-dragkey="stickigrip"] {
+  .VehicleBrandingSignage__dragable {
+    transform: scale(0.7) rotateZ(-2deg);
+  }
+}
+
+.VehicleBrandingSignage__dropTarget[data-dragkey="barrier"] {
+  .VehicleBrandingSignage__dragable {
+    transform: scale(1.5);
+  }
+}
+
+.VehicleBrandingSignage__dropTarget[data-dragkey="aframe"] {
+  overflow: hidden;
+
+  .VehicleBrandingSignage__dragable {
+    transform: scale(1.4) translateY(12%) translateX(10%)
+  }
+}
+
+.VehicleBrandingSignage__checkAnswerButtonContainer {
+  width: 100%;
+  margin: 2vh auto 0;
+}
+
+.VehicleBrandingSignage__checkAnswerButton {
+  pillButton(11em);
+  float: right;
+}

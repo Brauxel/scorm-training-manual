@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="595.28px" height="595.275px" viewBox="0 0 595.28 595.275" style="enable-background:new 0 0 595.28 595.275;"
+	 xml:space="preserve">
+<g id="Connector6_1">
+
+		<line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.1,6;" x1="186.836" y1="506.826" x2="57.481" y2="293.826"/>
+</g>
+<g id="Connector5_6">
+
+		<line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.1,6;" x1="187" y1="506.826" x2="415" y2="506.826"/>
+</g>
+<g id="Connector4_5">
+
+		<line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.1,6.1;" x1="544.011" y1="293.826" x2="414.654" y2="506.826"/>
+</g>
+<g id="Connector3_4">
+
+		<line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.1,6.1;" x1="415" y1="80.826" x2="544.356" y2="293.826"/>
+</g>
+<g id="Connector2_3">
+
+		<line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.1,6;" x1="187" y1="80.826" x2="415" y2="80.826"/>
+</g>
+<g id="Connector1_2">
+
+		<line style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:0.1,6;" x1="57.646" y1="293.826" x2="187" y2="80.826"/>
+</g>
+<g id="Node6">
+	<g id="OuterDisc_12_" style="opacity:0.6;">
+		<path style="fill:#FFFFFF;" d="M209.211,398.807L209.211,398.807c40.49,0,73.312,32.824,73.312,73.312v0.002
+			c0,40.488-32.822,73.311-73.312,73.311l0,0c-40.49,0-73.312-32.822-73.312-73.311v-0.002
+			C135.898,431.631,168.721,398.807,209.211,398.807z"/>
+	</g>
+	<circle id="InnerDisc_6_" style="fill:#FFFFFF;" cx="209.21" cy="472.119" r="63.769"/>
+</g>
+<g id="Node5">
+	<g id="OuterDisc_10_" style="opacity:0.6;">
+		<path style="fill:#FFFFFF;" d="M396.168,398.807L396.168,398.807c40.49,0,73.312,32.824,73.312,73.312v0.002
+			c0,40.488-32.822,73.311-73.312,73.311l0,0c-40.49,0-73.312-32.822-73.312-73.311v-0.002
+			C322.855,431.631,355.678,398.807,396.168,398.807z"/>
+	</g>
+	<circle id="InnerDisc_5_" style="fill:#FFFFFF;" cx="396.167" cy="472.119" r="63.769"/>
+</g>
+<g id="Node4">
+	<g id="OuterDisc" style="opacity:0.6;">
+		<path style="fill:#FFFFFF;" d="M499.066,214.75L499.066,214.75c40.49,0,73.312,32.823,73.312,73.312v0.002
+			c0,40.488-32.822,73.31-73.312,73.31l0,0c-40.49,0-73.312-32.821-73.312-73.31v-0.002
+			C425.754,247.573,458.576,214.75,499.066,214.75z"/>
+	</g>
+	<circle id="InnerDisc" style="fill:#FFFFFF;" cx="499.065" cy="288.062" r="63.769"/>
+</g>
+<g id="Node3">
+	<g id="OuterDisc_6_" style="opacity:0.6;">
+		<path style="fill:#FFFFFF;" d="M396.168,43.735L396.168,43.735c40.49,0,73.312,32.823,73.312,73.312v0.002
+			c0,40.488-32.822,73.31-73.312,73.31l0,0c-40.49,0-73.312-32.821-73.312-73.31v-0.002
+			C322.855,76.559,355.678,43.735,396.168,43.735z"/>
+	</g>
+	<circle id="InnerDisc_3_" style="fill:#FFFFFF;" cx="396.167" cy="117.047" r="63.769"/>
+</g>
+<g id="Node2">
+	<g id="OuterDisc_4_" style="opacity:0.6;">
+		<path style="fill:#FFFFFF;" d="M209.211,43.735L209.211,43.735c40.49,0,73.312,32.823,73.312,73.312v0.002
+			c0,40.488-32.822,73.31-73.312,73.31l0,0c-40.49,0-73.312-32.821-73.312-73.31v-0.002
+			C135.898,76.559,168.721,43.735,209.211,43.735z"/>
+	</g>
+	<circle id="InnerDisc_2_" style="fill:#FFFFFF;" cx="209.21" cy="117.047" r="63.769"/>
+</g>
+<g id="Node1">
+	<g id="OuterDisc_1_" style="opacity:0.6;">
+		<path style="fill:#FFFFFF;" d="M97.617,214.75L97.617,214.75c40.49,0,73.312,32.823,73.312,73.312v0.002
+			c0,40.488-32.822,73.31-73.312,73.31l0,0c-40.49,0-73.312-32.821-73.312-73.31v-0.002C24.304,247.573,57.126,214.75,97.617,214.75
+			z"/>
+	</g>
+	<circle id="InnerDisc_1_" style="fill:#FFFFFF;" cx="97.616" cy="288.062" r="63.769"/>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+</g>
+</svg>
