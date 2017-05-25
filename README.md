@@ -1,4 +1,4 @@
 scorm-training-manual
 ==============
 
-SCORM Based trainging manual.
+SCORM Based training manual.
